@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import axios from 'axios';
 import Head from "next/head";
 import Image from "next/image";
 import Files from "@/components/Files";
@@ -10,6 +11,33 @@ export default function Home() {
 
   const inputFile = useRef(null);
 
+
+
+// strategy : 
+/*
+  User get to page, upload, stamped, return a new entry with URL and add it to account.
+  User can access img and stamp from account; 
+  You just need to write a function to POST the CID and the stamp in answer; 
+*/ 
+
+
+
+async function placeholder()
+{
+  console.log("IT DID THE THING");
+  let stamp = 1234;
+  return stamp;
+}
+
+
+async function sendCid(ipfsHash)
+{
+  console.log("IT DID THE THING");
+  return ipfsHash;
+}
+
+
+
   const uploadFile = async (fileToUpload) => {
     try {
       setUploading(true);
@@ -20,6 +48,8 @@ export default function Home() {
         body: formData,
       });
       const ipfsHash = await res.text();
+      const stamp = placeholder();
+      // postCIDAndTimestamp(ipfsHash, stamp);
       setCid(ipfsHash);
       setUploading(false);
     } catch (e) {
@@ -34,6 +64,7 @@ export default function Home() {
     uploadFile(e.target.files[0]);
   };
 
+  // hardly need it need to replace ? not really.
   const loadRecent = async () => {
     try {
       const res = await fetch("/api/files");
