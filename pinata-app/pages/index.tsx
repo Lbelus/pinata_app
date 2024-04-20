@@ -78,13 +78,13 @@ export default function Home() {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/pinnie.png" />
 			</Head>
-			<main className="w-full min-h-screen m-auto flex flex-col justify-center items-center">
-				<div className="w-full h-full m-auto bg-heroImage bg-cover bg-center flex flex-col justify-center items-center">
-					<div className="h-full max-w-screen-xl ">
+			<main className="w-full h-screen m-auto flex flex-col justify-center items-center">
+				<div className="w-full max-h-full m-auto bg-heroImage bg-cover bg-center flex flex-col justify-center items-center">
+					<div className="max-h-full max-w-screen-xl">
 						<div className="w-full m-auto mt-16 flex justify-start items-center">
 							<Image src="/logo.png" alt="Pinata logo" height={30} width={115} />
 						</div>
-						<div className="h-screen w-full flex justify-center items-center gap-8">
+						<div className="h-[87vh] w-full flex justify-center items-center gap-8">
 							<div className="w-1/2 flex flex-col gap-6 m-8">
 								<h1>Pinata + Next.js</h1>
 								<p>
@@ -117,12 +117,12 @@ export default function Home() {
 									<Files cid={cid} />
 								)}
 							</div>
-							<div className="w-1/2 flex justify-center items-center h-full">
+							<div className="w-1/2 flex justify-center items-center max-h-full">
 								<Image height={600} width={600} src="/hero.png" alt="hero image of computer and code" />
 							</div>
 						</div>
 					</div>
-					<div className="bg-accent w-full h-full">
+					<div className="bg-accent w-full max-h-full">
 						<div className="max-w-screen-xl mx-auto py-6 flex justify-between items-center text-light">
 							<p className="text-xs">Copyright © 2023 Pinata | All Rights Reserved </p>
 							<div className="flex items-center gap-10 mr-4">

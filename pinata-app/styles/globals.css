@@ -32,7 +32,14 @@
   }
 
   h1 {
-    @apply font-agrandir font-bold text-5xl;
+    @apply font-agrandir font-bold;
+    font-size: 1.25rem; /* Default size */
+    @screen md {
+      font-size: 2rem; /* Medium screens */
+    }
+    @screen lg {
+      font-size: 3rem; /* Large screens */
+    }
   }
 
   a, button {
