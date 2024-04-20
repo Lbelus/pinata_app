@@ -21,31 +21,27 @@
     --color-grey: #eee;
   }
 
+  
   html {
-    @apply p-0 m-0 scroll-smooth w-full h-full;
+    @apply p-0 m-0 scroll-smooth w-full h-full ;
+    
   }
 
-  html body {
-    @apply m-0 h-screen w-full bg-light text-black font-telegraf;
+  body {
+    @apply m-0 h-full w-full bg-light text-black font-telegraf;
   }
 
-  h1, h2, h3, h4 {
-    @apply font-agrandir font-bold;
-  }
   h1 {
-    @apply text-5xl;
+    @apply font-agrandir font-bold text-5xl;
   }
 
-  a {
+  a, button {
     @apply text-black;
   }
 
   button {
-    @apply font-telegraf font-bold;
+    @apply font-bold;
   }
-
 }
 @tailwind components;
 @tailwind utilities;
-
-
