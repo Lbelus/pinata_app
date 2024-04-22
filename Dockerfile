@@ -11,8 +11,6 @@ RUN apt-get update && apt-get install -y \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 
-# Remove IF any existing Node.js and npm installations
-RUN apt-get remove -y nodejs npm || true
 
 # Install Node.js (LTS Version) and npm
 RUN curl -fsSL https://deb.nodesource.com/setup_18.x | bash - \
